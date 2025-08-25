@@ -55,7 +55,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 3rem;
             margin: 0;
             justify-items: flex-end;
         }
@@ -75,7 +75,7 @@
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: -5%;
             width: 100%;
             height: 100%;
             background: linear-gradient(45deg, #989cb0, #bba0d6);
