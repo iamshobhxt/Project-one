@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <section id="home">
-
         <nav class="navbar">
             <div class="nav-container">
                 <img src="facultyPaths icon.png" alt="">
@@ -18,103 +16,117 @@
                         <a href="#home" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a href="#services" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#testimonials" class="nav-link">Stories</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#career" class="nav-link">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
+                    </li>
                 </ul>
+                <button onclick="document.location ='login.html'"><h4>Account</h4></button>   
 
                 
                 <button class="nav-toggle">
                     <div class="hamburger"></div>
                     <div class="hamburger"></div>
                     <div class="hamburger"></div>
-                    <div class="hamburger"></div>
                 </button>
             </div>
         </nav>
-    </section>
+        <main class="main">
 
-    <div class="content">
-        <h1>Binge on Brilliance</h1>
-        <h2>Find Your Mentor</h2>
-        <h3>Ace Your Paths</h3>
-        <button onclick="document.location ='login.html'"><h4>SignUp</h4></button>
-        <button onclick="document.location='login.html'"><h4>Login</h4></button>
-    </div>
-
-    <section id="About">
-
-    </section>
-    
-    <section id="services">
-
-        <div class="services-container">
-           <div class="services-header">
-               <h2 class="services-title">Core Services</h2>
-               <p class="services-subtitle">"From Faculty Recruitment to Student Success - Your Complete Educational Ecosystem"</p>
-           </div>
-           
-           <div class="services-carousel">
-               <button class="nav-button prev" onclick="scrollServices(-1)">‹</button>
-               <button class="nav-button next" onclick="scrollServices(1)">›</button>
-               
-               <div class="services-wrapper" id="servicesWrapper">
-                   <div class="service-card">
-                       <div class="service-icon">🎓</div>
-                       <h3 class="service-title">Faculty Solutions</h3>
-                       <p class="service-description">Transform your institution with comprehensive faculty solutions. We provide verified teacher recruitment, quality educators on payroll, specialized placement training programs, and advanced performance management systems to elevate your academic standards.</p>
+            <section id="home">
+            <div class="slideshow">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img1">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80" alt="img2">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80" alt="img3">
+            </div>
+        
+            <div class="content">
+              <h1>Binge on Brilliance</h1>
+              <h2>Find Your Mentor</h2>
+              <h3>Ace Your Paths</h3>
+              <div class="btns">
+                <button onclick="document.location ='#services'">🚀 Get Started</button>
+                <button onclick="document.location=''">▶ Watch Demo</button>
+              </div>
+            </div>
+          </section>
+            
+            <section id="services">
+        
+                <div class="services-container">
+                   <div class="services-header">
+                       <h2 class="services-title">Core Services</h2>
+                       <p class="services-subtitle">"From Faculty Recruitment to Student Success - Your Complete Educational Ecosystem"</p>
                    </div>
                    
-                   <div class="service-card">
-                       <div class="service-icon">🚀</div>
-                       <h3 class="service-title">Business Growth</h3>
-                       <p class="service-description">Accelerate your growth with specialized business solutions. We deliver qualified sales professionals, comprehensive course promotion strategies, and targeted business expansion support for EdTech ventures.</p>
-                   </div>
-                   
-                   <div class="service-card">
-                       <div class="service-icon">🤝</div>
-                       <h3 class="service-title">Campus Recruitment</h3>
-                       <p class="service-description">Streamline talent acquisition through strategic campus partnerships. Access fresh technical talent, benefit from rigorous screening processes, and leverage our project support solutions to build your team.</p>
-                   </div>
-                   
-                   <div class="service-card">
-                       <div class="service-icon">💡</div>
-                       <h3 class="service-title">Educator Platform</h3>
-                       <p class="service-description">Monetize your expertise on our innovative platform. Create and sell courses directly to students, build meaningful connections with learners, and transform your teaching passion into sustainable income streams.</p>
-                   </div>
-                   
-                   <div class="service-card">
-                       <div class="service-icon">📚</div>
-                       <h3 class="service-title">Personalized Learning</h3>
-                       <p class="service-description">Unlock academic potential with tailored learning experiences. Access expert tutoring from K-12 through higher education, exam preparation, skill development, and AI-powered progress tracking.</p>
-                   </div>
-                   
-                   <div class="service-card">
-                       <div class="service-icon">⚡</div>
-                       <h3 class="service-title">Technology Solutions</h3>
-                       <p class="service-description">Experience cutting-edge educational technology. Our advanced learning analytics, automated assessment tracking, and digital management tools help institutions embrace digital transformation seamlessly.</p>
+                   <div class="services-carousel">
+                       <button class="nav-button prev" onclick="scrollServices(-1)">‹</button>
+                       <button class="nav-button next" onclick="scrollServices(1)">›</button>
+                       
+                       <div class="services-wrapper" id="servicesWrapper">
+                           <div class="service-card">
+                               <div class="service-icon">🎓</div>
+                               <h3 class="service-title">Faculty Solutions</h3>
+                               <p class="service-description">Transform your institution with comprehensive faculty solutions. We provide verified teacher recruitment, quality educators on payroll, specialized placement training programs.</p>
+                           </div>
+                           
+                           <div class="service-card">
+                               <div class="service-icon">🚀</div>
+                               <h3 class="service-title">Business Growth</h3>
+                               <p class="service-description">Accelerate your growth with specialized business solutions. We deliver qualified sales professionals, comprehensive course promotion strategies, and targeted business expansion support for EdTech ventures.</p>
+                           </div>
+                           
+                           <div class="service-card">
+                               <div class="service-icon">🤝</div>
+                               <h3 class="service-title">Campus Recruitment</h3>
+                               <p class="service-description">Streamline talent acquisition through strategic campus partnerships. Access fresh technical talent, benefit from rigorous screening processes, and leverage our project support solutions.</p>
+                           </div>
+                           
+                           <div class="service-card">
+                               <div class="service-icon">💡</div>
+                               <h3 class="service-title">Educator Platform</h3>
+                               <p class="service-description">Monetize your expertise on our innovative platform. Create and sell courses directly to students, build meaningful connections with learners, and transform your teaching passion into sustainable income streams.</p>
+                           </div>
+                           
+                           <div class="service-card">
+                               <div class="service-icon">📚</div>
+                               <h3 class="service-title">Personalized Learning</h3>
+                               <p class="service-description">Unlock academic potential with tailored learning experiences. Access expert tutoring from K-12 through higher education, exam preparation, skill development, and AI-powered progress tracking.</p>
+                           </div>
+                           
+                           <div class="service-card">
+                               <div class="service-icon">⚡</div>
+                               <h3 class="service-title">Technology Solutions</h3>
+                               <p class="service-description">Experience cutting-edge educational technology. Our advanced learning analytics, automated assessment tracking, and digital management tools help institutions.</p>
+                           </div>
+                       </div>
+                       
+                       <div class="dots-indicator" id="dotsIndicator">
+                           <!-- Dots will be generated by JavaScript -->
+                       </div>
                    </div>
                </div>
-               
-               <div class="dots-indicator" id="dotsIndicator">
-                   <!-- Dots will be generated by JavaScript -->
-               </div>
-           </div>
-       </div>
-    </section>
+            </section>
+        
+            <section id="Testinomials">
+        
+        
+            </section>
+        </main>
 
-    <section id="Testinomials">
-
-
-    </section>
 
    <script>
 
