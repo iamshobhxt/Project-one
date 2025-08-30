@@ -255,13 +255,13 @@
             }
 
             .content h1 {
-                font-size: 7rem;
+                font-size: 3rem;
             }
             .content h2 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             .content h3 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
 
@@ -305,20 +305,19 @@
             }
 
             
-            .content{
-                width: auto;
+            .home{
+                width: 100%;
                 height: 50vh;
             }
             .content h1 {
-               font-size: 2rem;
-               margin-top: 20px;
+               font-size: 2.5rem;
                font-weight: 800;
             }
             .content h2 {
-                font-size: 0.5rem;
+                font-size: 1.5rem;
             }
             .content h3 {
-                font-size: 1rem;
+                font-size: 1.75rem;
             }
             
         }
@@ -509,20 +508,19 @@
                 font-size: clamp(2.5rem, 5vw, 4rem);
                 font-weight: 800; 
 
-            }
-            .content{
+            }   
+            .home{
                 width: 100%;
                 height: 50vh;
             }
-            .content h1{
-                margin-top: 70px;
-                font-size: 3rem ;
+            content h1{
+                font-size:2.5rem ;
             }
             .content h2{
                 font-size: 1.5rem;
             }
             .content h3{
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .nav-button {
@@ -565,7 +563,8 @@
             }
 
             .nav-logo {
-                font-size: 18px;
+                font-size: 8px;
+                padding-left: 0;
             }
 
             .nav-menu {
@@ -577,12 +576,14 @@
                 height: 2px;
             }
 
-            .content {
-                margin-top: 10px;
+            
+            .home{
+                width: 100%;
+                height: 50vh;
             }
 
             .content h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             .content h2 {
                 font-size: 1.5rem;
@@ -606,3 +607,336 @@
         .nav-link.active::before {
             left: 0;
         }
+        .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3.5rem;
+    color: #1f2937;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  /* Industries Section */
+.industries {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.industry-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+.industry-card i {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.industry-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 6rem 0;
+    background: white;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    padding: 2rem;
+}
+
+.portfolio-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #1f2937;
+}
+
+.portfolio-content p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Careers Section */
+.careers {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.careers-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.careers-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.careers-info p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.benefits h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+}
+
+.benefits ul {
+    color: #6b7280;
+}
+
+.benefits li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.job-openings h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.job-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.job-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.job-card p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.apply-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background: black;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.contact-info p {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin-right: 1rem;
+    width: 30px;
+}
+
+.contact-item p {
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .careers-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .industries-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
