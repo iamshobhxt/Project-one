@@ -363,3 +363,13 @@ document.addEventListener('DOMContentLoaded', () => {
         viewBtn.style.display = "none"; // hide button
     });
 });
+
+// portfolio section
+
+document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.querySelector('.view-all-btn');
+            
+            btn.addEventListener('click', function() {
+                alert('View All Projects clicked!');
+            });
+        });
