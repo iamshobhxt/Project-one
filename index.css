@@ -538,7 +538,7 @@
 /* Small Tablet / Phone Landscape (between 481px - 768px) */
 @media screen and (max-width: 768px) and (min-width: 481px) {
   .industries-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
