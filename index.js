@@ -1,5 +1,4 @@
-
-    const navToggle = document.querySelector('.nav-toggle');
+  const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -223,3 +222,144 @@
         servicesContainer.addEventListener('mouseleave', startAutoScroll);
         startAutoScroll();
     });
+     const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Job application buttons
+    const applyButtons = document.querySelectorAll('.apply-btn');
+    applyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const jobTitle = this.parentElement.querySelector('h4').textContent;
+            alert(`Thank you for your interest in the ${jobTitle} position! Our team will contact you shortly.`);
+            
+            // In a real implementation, this would open a modal or redirect to an application form
+        });
+    });
+
+    // Contact form validation and submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+            const messageInput = this.querySelector('textarea');
+            
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                highlightError(nameInput);
+                isValid = false;
+            } else {
+                removeErrorHighlight(nameInput);
+            }
+            
+            if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                highlightError(emailInput);
+                isValid = false;
+            } else {
+                removeErrorHighlight(emailInput);
+            }
+            
+            if (!messageInput.value.trim()) {
+                highlightError(messageInput);
+                isValid = false;
+            } else {
+                removeErrorHighlight(messageInput);
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = this.querySelector('button');
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('Thank you for your message! We will get back to you within 24 hours.');
+                    this.reset();
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                }, 1500);
+            }
+        });
+    }
+
+    // Industry cards animation
+    const industryCards = document.querySelectorAll('.industry-card');
+    industryCards.forEach((card, index) => {
+        // Add delay for staggered animation
+        card.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    // Helper functions
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    function highlightError(element) {
+        element.style.borderColor = '#ef4444';
+        element.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+    }
+    
+    function removeErrorHighlight(element) {
+        element.style.borderColor = '#e5e7eb';
+        element.style.boxShadow = 'none';
+    }
+
+// for services
+    document.addEventListener('DOMContentLoaded', () => {
+    const viewBtn = document.getElementById("viewAllBtn");
+    viewBtn.addEventListener("click", () => {
+        const hiddenCards = document.querySelectorAll(".service-card.hidden");
+        hiddenCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add("show");
+                card.classList.remove("hidden");
+            }, index * 150); // stagger animation
+        });
+        viewBtn.style.display = "none"; // hide button
+    });
+});
+
+// for industry
+document.addEventListener('DOMContentLoaded', () => {
+    const viewBtn = document.getElementById("viewAllIndustriesBtn");
+    viewBtn.addEventListener("click", () => {
+        const hiddenCards = document.querySelectorAll(".industry-card.hidden");
+        hiddenCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add("show");
+                card.classList.remove("hidden");
+            }, index * 150); // stagger animation
+        });
+        viewBtn.style.display = "none"; // hide button
+    });
+});
+
+// for jobs opening section
+document.addEventListener('DOMContentLoaded', () => {
+    const viewBtn = document.getElementById("viewAllJobsBtn");
+    viewBtn.addEventListener("click", () => {
+        const hiddenCards = document.querySelectorAll(".job-card.hidden");
+        hiddenCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add("show");
+                card.classList.remove("hidden");
+            }, index * 150); // stagger animation
+        });
+        viewBtn.style.display = "none"; // hide button
+    });
+});
