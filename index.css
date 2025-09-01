@@ -773,6 +773,7 @@ html {
 
     .portfolio-header p {
         font-size: 14px !important;
+        width: 100%;
     }
 
     .project-card {
