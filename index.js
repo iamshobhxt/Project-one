@@ -365,8 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // portfolio section
-
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
             const btn = document.querySelector('.view-all-btn');
             
             btn.addEventListener('click', function() {

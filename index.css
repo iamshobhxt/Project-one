@@ -552,10 +552,9 @@ html {
 /* Portfolio Section */
         .portfolio-section {
             background: linear-gradient(135deg, #2A1B5A 0%, #1B4B4A 100%);
-            padding: 40px 40px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            padding: 40px 40px 40px; 
+            min-height: auto; 
+            display: block;  
         }
 
         .container {
@@ -601,7 +600,8 @@ html {
         }
 
         .projects-grid {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             justify-content: center;
             gap: 30px;
             margin-bottom: 60px;
@@ -749,52 +749,55 @@ html {
         .view-all-btn:hover::before {
             left: 100%;
         }
+    @media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+    .project-card {
+        width: 100%; 
+    }
+    }
 
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .projects-grid {
-                gap: 20px;
-            }
-            
-            .project-card {
-                width: 320px;
-            }
-        }
+    @media (max-width: 768px) {
+        .portfolio-section {
+    padding: 60px 20px 30px;
+  }
+        .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 20px;
+    }
+    .portfolio-header h1 {
+        font-size: 32px !important;
+    }
 
-        @media (max-width: 768px) {
-            .portfolio-header h1 {
-                font-size: 36px;
-            }
+    .portfolio-header p {
+        font-size: 14px !important;
+    }
 
-            .portfolio-header p {
-                font-size: 14px;
-            }
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
 
-            .projects-grid {
-                flex-direction: column;
-                align-items: center;
-                gap: 25px;
-            }
+/* ✅ Mobile ke liye */
+@media (max-width: 480px) {
+    .portfolio-section {
+    padding: 40px 15px 20px;
+  }
+    .portfolio-header h1 {
+        font-size: 26px !important;
+    }
 
-            .project-card {
-                width: 100%;
-                max-width: 350px;
-            }
-        }
+    .project-content {
+        padding: 16px !important;
+    }
 
-        @media (max-width: 480px) {
-            .portfolio-header h1 {
-                font-size: 28px;
-            }
-
-            .project-content {
-                padding: 20px;
-            }
-
-            .project-title {
-                font-size: 16px;
-            }
-        }
+    .project-title {
+        font-size: 15px !important;
+    }
+}
 
 /* Careers Section */
 .careers {
