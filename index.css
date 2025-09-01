@@ -509,6 +509,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* Desktop = 5 columns */
   gap: 25px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -545,7 +546,7 @@
 /* Extra Small Phone (0 - 480px) */
 @media screen and (max-width: 480px) {
   .industries-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
