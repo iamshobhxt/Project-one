@@ -531,7 +531,7 @@
 /* Tablet (between 769px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   .industries-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr)!important;
   }
 }
 
