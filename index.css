@@ -877,9 +877,8 @@
 
 /* ✅ Mobile ke liye */
 @media (max-width: 480px) {
-    projects-grid {
-        grid-template-columns: repeat(1, 1fr); 
-        gap: 20px;
+    .projects-grid {
+        grid-template-columns:1fr; 
     }
     .portfolio-section {
     padding: 40px 15px 20px;
