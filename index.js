@@ -372,3 +372,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('View All Projects clicked!');
             });
         });
+
+// service section 
+document.addEventListener('DOMContentLoaded', function() {
+      const viewMoreButtons = document.querySelectorAll('.view-more-btn');
+      viewMoreButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const serviceTitle = this.parentElement.querySelector('.service-title').textContent;
+          alert(`View More clicked for: ${serviceTitle}`);
+        });
+      });
+
+      const viewAllBtn = document.querySelector('.view-all-btn');
+      viewAllBtn.addEventListener('click', function() {
+        alert('View All Services clicked!');
+      });
+
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(card);
+      });
+    });        
