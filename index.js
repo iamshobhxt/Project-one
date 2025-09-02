@@ -405,4 +405,63 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(card);
       });
-    });        
+    });  
+    
+// for our clients
+
+     // Animation and dot sync functionality
+        const dots = document.querySelectorAll('.dot');
+        const wrapper = document.querySelector('.clients-wrapper');
+        const container = document.querySelector('.clients-container');
+        let currentIndex = 0;
+        let animationDuration = 20000; // 20 seconds
+        let startTime = Date.now();
+        
+        // Sync dots with animation progress
+        function syncDotsWithAnimation() {
+            const elapsedTime = (Date.now() - startTime) % animationDuration;
+            const progress = elapsedTime / animationDuration;
+            
+            // Switch dot based on animation progress
+            const newIndex = progress < 0.5 ? 0 : 1;
+            
+            if (newIndex !== currentIndex) {
+                dots[currentIndex].classList.remove('active');
+                currentIndex = newIndex;
+                dots[currentIndex].classList.add('active');
+            }
+        }
+        
+        // Update dots every 100ms for smooth transition
+        setInterval(syncDotsWithAnimation, 100);
+        
+        // Manual dot clicking with animation sync
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                dots[currentIndex].classList.remove('active');
+                currentIndex = index;
+                dots[currentIndex].classList.add('active');
+                
+                // Reset start time to sync with clicked dot
+                startTime = Date.now() - (index * animationDuration / 2);
+            });
+        });
+
+        // Pause animation and dot sync on hover
+        let isPaused = false;
+        let pausedTime = 0;
+        
+        container.addEventListener('mouseenter', () => {
+            wrapper.style.animationPlayState = 'paused';
+            isPaused = true;
+            pausedTime = Date.now();
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            wrapper.style.animationPlayState = 'running';
+            if (isPaused) {
+                const pauseDuration = Date.now() - pausedTime;
+                startTime += pauseDuration; // Adjust start time to account for pause
+                isPaused = false;
+            }
+        });
