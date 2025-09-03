@@ -220,6 +220,7 @@
             .logo-icon img {
                 width:200px;
                 height:40px;
+            }
         }
 
         /* Responsive Design */
@@ -1559,4 +1560,3 @@
         grid-template-columns: 1fr;
     }
 }
-
