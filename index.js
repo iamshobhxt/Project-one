@@ -1,57 +1,41 @@
-  const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+// for navbar
 
-    // Toggle mobile menu
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
 
-    // Close menu when clicking on a link (mobile)
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
         });
-    });
 
-    // Handle active link highlighting
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            // Add active class to clicked link
-            e.target.classList.add('active');
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
         });
-    });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
 
-    // Add scroll effect to navbar
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            navbar.style.transform = 'translateY(0)';
-        }
-
-        lastScrollTop = scrollTop;
-    }); // <-- Missing closing bracket added here
-
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'white';
+                header.style.backdropFilter = 'none';
+            }
+        });
     class ServicesCarousel {
         constructor() {
             this.wrapper = document.getElementById('servicesWrapper');
@@ -295,44 +279,6 @@
             }
         });
     }
-
-    // Industry cards animation
-    const industryCards = document.querySelectorAll('.industry-card');
-    industryCards.forEach((card, index) => {
-        // Add delay for staggered animation
-        card.style.animationDelay = `${index * 0.2}s`;
-    });
-
-    // Helper functions
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-    
-    function highlightError(element) {
-        element.style.borderColor = '#ef4444';
-        element.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
-    }
-    
-    function removeErrorHighlight(element) {
-        element.style.borderColor = '#e5e7eb';
-        element.style.boxShadow = 'none';
-    }
-
-// for services
-    document.addEventListener('DOMContentLoaded', () => {
-    const viewBtn = document.getElementById("viewAllBtn");
-    viewBtn.addEventListener("click", () => {
-        const hiddenCards = document.querySelectorAll(".service-card.hidden");
-        hiddenCards.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add("show");
-                card.classList.remove("hidden");
-            }, index * 150); // stagger animation
-        });
-        viewBtn.style.display = "none"; // hide button
-    });
-});
 
 // for industry
 document.addEventListener('DOMContentLoaded', () => {
